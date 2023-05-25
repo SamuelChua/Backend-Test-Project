@@ -4,5 +4,5 @@ from django.conf import settings
 
 class ProjectPair(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    email = models.EmailField( verbose_name='email', max_length=255, unique=True)
+    text = models.TextField(max_length=255, default = "enter your occupation")
     
